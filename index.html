@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>WEATHERLY</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="site-header">
+        <h1 class="title">WEATHERLY</h1>
+        <p class="tag">Clean, minimal weather lookup</p>
+      </header>
+
+      <section class="card form-card">
+        <form id="search-form" class="search-form" autocomplete="off">
+          <div class="row">
+            <label class="visually-hidden" for="city">City</label>
+            <input id="city" name="city" type="text" placeholder="City (e.g. London)" required />
+
+            <label class="visually-hidden" for="country">Country</label>
+            <input id="country" name="country" type="text" placeholder="Country (e.g. UK or GB)" required />
+          </div>
+
+          <div class="row">
+            <label class="visually-hidden" for="apikey">API Key</label>
+            <input id="apikey" name="apikey" type="text" placeholder="OpenWeatherMap API Key" />
+            <button id="get-weather" class="btn" type="submit">Get Weather</button>
+          </div>
+
+          <p id="feedback" class="feedback" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section id="result" class="card result-card hidden">
+        <div class="result-header">
+          <div>
+            <h2 id="location" class="location"></h2>
+            <p id="condition" class="condition muted"></p>
+          </div>
+          <img id="icon" class="weather-icon" alt="weather icon" src="" />
+        </div>
+
+        <div class="metrics">
+          <div class="metric">
+            <div class="metric-value" id="temp"></div>
+            <div class="metric-label">Temperature</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value" id="humidity"></div>
+            <div class="metric-label">Humidity</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value" id="wind"></div>
+            <div class="metric-label">Wind</div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="site-footer muted">Powered by OpenWeatherMap • Static client-only demo</footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
