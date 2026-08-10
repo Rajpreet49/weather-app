@@ -15,17 +15,22 @@
 
       <section class="card form-card">
         <form id="search-form" class="search-form" autocomplete="off">
-          <div class="row">
-            <label class="visually-hidden" for="city">City</label>
-            <input id="city" name="city" type="text" placeholder="City (e.g. London)" required />
+          <div class="input-group">
+            <label for="city">City</label>
+            <input id="city" name="city" type="text" placeholder="London" required />
+          </div>
 
-            <label class="visually-hidden" for="country">Country</label>
-            <input id="country" name="country" type="text" placeholder="Country (e.g. UK or GB)" required />
+          <div class="input-group">
+            <label for="country">Country</label>
+            <input id="country" name="country" type="text" placeholder="UK or GB" required />
+          </div>
+
+          <div class="input-group">
+            <label for="apikey">OpenWeatherMap API Key</label>
+            <input id="apikey" name="apikey" type="text" placeholder="Enter key here" />
           </div>
 
           <div class="row">
-            <label class="visually-hidden" for="apikey">API Key</label>
-            <input id="apikey" name="apikey" type="text" placeholder="OpenWeatherMap API Key" />
             <button id="get-weather" class="btn" type="submit">Get Weather</button>
           </div>
 
